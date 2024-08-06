@@ -111,6 +111,12 @@ export default {
       }
     });
 
+    /**
+     * Toggles the favorite status of a product.
+     *
+     * @param {number} productId - The ID of the product to toggle.
+     */
+
     function toggleFavorite(productId) {
       if (favorites.value.includes(productId)) {
         favorites.value = favorites.value.filter((id) => id !== productId);
@@ -119,6 +125,13 @@ export default {
       }
       localStorage.setItem("favorites", JSON.stringify(favorites.value));
     }
+
+    /**
+     * Checks if a product is marked as a favorite.
+     *
+     * @param {number} productId - The ID of the product to check.
+     * @returns {boolean} True if the product is a favorite, otherwise false.
+     */
 
     function isFavorite(productId) {
       return favorites.value.includes(productId);
