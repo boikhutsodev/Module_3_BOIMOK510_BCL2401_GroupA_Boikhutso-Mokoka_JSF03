@@ -48,6 +48,12 @@ import { ref, onMounted, computed } from "vue";
 import Loading from "../components/Loading.vue";
 import ProductGrid from "../components/ProductGrid.vue";
 
+/**
+ * The home view component.
+ *
+ * @component
+ */
+
 export default {
   components: {
     Loading,
@@ -61,6 +67,10 @@ export default {
     const sortOrder = ref("");
     const loading = ref(true);
 
+    /**
+     * Fetches products from the API.
+     */
+
     const fetchProducts = async () => {
       loading.value = true;
       const response = await fetch("https://fakestoreapi.com/products");
@@ -68,6 +78,10 @@ export default {
       products.value = data;
       loading.value = false;
     };
+
+    /**
+     * Fetches product categories from the API.
+     */
 
     const fetchCategories = async () => {
       const response = await fetch(
@@ -77,11 +91,21 @@ export default {
       categories.value = data;
     };
 
+    /**
+     * Filters products based on the search query.
+     */
+
     const searchProducts = () => {
       filteredProducts.value = products.value.filter((product) =>
         product.title.toLowerCase().includes(searchQuery.value.toLowerCase())
       );
     };
+
+    /**
+     * Computes the filtered and sorted products based on category, sort order, and search query.
+     *
+     * @returns {Array<Object>} The filtered and sorted products.
+     */
 
     const filteredProducts = computed(() => {
       let prods = products.value;

@@ -10,6 +10,12 @@
 </template>
 
 <script>
+/**
+ * The navigation bar component.
+ *
+ * @component
+ */
+
 export default {
   name: "Navbar",
 };

@@ -83,6 +83,12 @@
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 
+/**
+ * The product detail view component.
+ *
+ * @component
+ */
+
 export default {
   setup() {
     const route = useRoute();

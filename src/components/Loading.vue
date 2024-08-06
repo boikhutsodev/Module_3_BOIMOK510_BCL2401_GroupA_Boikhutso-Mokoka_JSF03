@@ -34,6 +34,8 @@ export default {
 };
 </script>
 
+/** * The loading component. * * @component */
+
 <style scoped>
 @keyframes spin {
   0% {

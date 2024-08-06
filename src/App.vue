@@ -6,6 +6,12 @@
 <script>
 import Navbar from "./components/Navbar.vue";
 
+/**
+ * The root component of the application.
+ *
+ * @component
+ */
+
 export default {
   components: {
     Navbar,
