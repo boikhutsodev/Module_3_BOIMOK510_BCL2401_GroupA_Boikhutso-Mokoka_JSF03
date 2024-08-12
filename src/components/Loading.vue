@@ -1,3 +1,5 @@
+<!-- src/components/Loading.vue -->
+
 <template>
   <div
     class="fixed inset-0 flex items-center justify-center bg-gray-100 bg-opacity-75"

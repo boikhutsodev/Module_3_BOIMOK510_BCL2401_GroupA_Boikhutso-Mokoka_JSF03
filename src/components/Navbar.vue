@@ -1,3 +1,5 @@
+<!-- src/components/Navbar.vue -->
+
 <template>
   <nav
     class="fixed top-0 left-0 w-full bg-pink-500 text-white flex justify-between p-4"

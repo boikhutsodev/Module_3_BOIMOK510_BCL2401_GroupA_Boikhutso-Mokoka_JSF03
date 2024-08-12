@@ -1,3 +1,5 @@
+<!-- src/views/ProductDetails.vue -->
+
 <template>
   <div
     v-if="loading"

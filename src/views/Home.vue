@@ -1,3 +1,5 @@
+<!-- src/views/Home.vue -->
+
 <template>
   <div class="container mx-auto p-6">
     <div class="mt-20 flex justify-between items-center flex-wrap mb-4">
